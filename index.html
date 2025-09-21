@@ -1,327 +1,334 @@
-<script src="https://cdn.jsdelivr.net/gh/eu81273/jsfiddle-console/console.js"></script>
-
-
-
-
-<div class="section">
-    <div class="container-left" >
-        <div style="display: flex; justify-content: space-between">
-            <strong> Organisation </strong>
-            <button onclick="fname.placeholder='first name'">Clear Section</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTN Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="section">
+        <div class="container-left" >
+            <div style="display: flex; justify-content: space-between">
+                <strong> Organisation </strong>
+                <button onclick="fname.placeholder='first name'">Clear Section</button>
+            </div>
+            <label for="company">   Org Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
+            <label for="type">      Capability</label>      <input type="text"  id="type"    name="companytype" autocapitalize="words" list="capability">
+            <label for="HQ">        HQ Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
+            <label for="website">   Website</label>         <input type="text"  id="website" name="accountURL"  >
+            <label for="scale">     Devices Deployed</label><input type="text"  id="scale"   name="accountScale"  >
+            <label for="LAmember">  LoRa NetID?</label>     <input type="checkbox" id=""name="accountNetID" >
         </div>
-        <label for="company">   Org Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
-        <label for="type">      Capability</label>      <input type="text"  id="type"    name="companytype" autocapitalize="words" list="capability">
-        <label for="HQ">        HQ Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
-        <label for="website">   Website</label>         <input type="text"  id="website" name="accountURL"  >
-        <label for="scale">     Devices Deployed</label><input type="text"  id="scale"   name="accountScale"  >
-        <label for="LAmember">  LoRa NetID?</label>     <input type="checkbox" id=""name="accountNetID" >
+    
+        <div class="container-right" style="background-color :#ab80d0">
+            <div style="display: flex; justify-content: space-between">
+                <strong> Contact </strong>
+                <button onclick="fname.placeholder='first name'">Clear Section</button>
+            </div>
+            <label for="fname">     First Name</label>      <input type="text"  id="fname"  name="contactfirst" autocapitalize="words">
+            <label for="lname">     Last Name</label>       <input type="text"  id="lname"  name="contactlast"  autocapitalize="words">
+            <label for="email">     Email</label>           <input type="text"  id="email"  name="contactemail" required>
+            <label for="gdpr">      GDPR</label>            <input type="checkbox" id="gdpr"name="contactgdpr"  >
+            <label for="news">      Newsletter</label>      <input type="checkbox" id="news"name="contactnews"  >
+        </div>
     </div>
-
-    <div class="container-right" style="background-color :#ab80d0">
-        <div style="display: flex; justify-content: space-between">
-            <strong> Contact </strong>
-            <button onclick="fname.placeholder='first name'">Clear Section</button>
+    <p></p>
+    <div class="section">
+        <div class="container-left" style="background-color :#b797d3" >
+            <div style="display: flex; justify-content: space-between">
+                <strong> Project </strong>
+                <button onclick="fname.placeholder='first name'">Clear Section</button>
+            </div>
+            <label for="company">   Project Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
+            <label for="type">      Sector</label>              <input type="text"  id="type"    name="companytype" autocapitalize="words" list="sectors">
+            <label for="HQ">        Target Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
+            <label for="OppNotes">  Description</label>         <textarea           id="OppNotes"name="oppNotes"    rows="5" > details of project </textarea>
         </div>
-        <label for="fname">     First Name</label>      <input type="text"  id="fname"  name="contactfirst" autocapitalize="words">
-        <label for="lname">     Last Name</label>       <input type="text"  id="lname"  name="contactlast"  autocapitalize="words">
-        <label for="email">     Email</label>           <input type="text"  id="email"  name="contactemail" required>
-        <label for="gdpr">      GDPR</label>            <input type="checkbox" id="gdpr"name="contactgdpr"  >
-        <label for="news">      Newsletter</label>      <input type="checkbox" id="news"name="contactnews"  >
+    
+        <div class="container-right" style="background-color :#cab2df">
+            <div style="display: flex; justify-content: space-between">
+                <strong> Next Action </strong>
+                <button onclick="fname.placeholder='first name'">Clear Section</button>
+            </div>
+            <label for="NDA">       NDA</label>                  <input type="checkbox" id="NDA"name="accountNDA"  > <p></p>
+            <label for="action">   Next Action</label>         <input type="text"  id="action"  name="accountURL"    list="actions">
+            
+        </div>
+        </div>
     </div>
-</div>
-<p></p>
-<div class="section">
-    <div class="container-left" style="background-color :#b797d3" >
-        <div style="display: flex; justify-content: space-between">
-            <strong> Project </strong>
-            <button onclick="fname.placeholder='first name'">Clear Section</button>
-        </div>
-        <label for="company">   Project Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
-        <label for="type">      Sector</label>              <input type="text"  id="type"    name="companytype" autocapitalize="words" list="sectors">
-        <label for="HQ">        Target Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
-        <label for="OppNotes">  Description</label>         <textarea           id="OppNotes"name="oppNotes"    rows="5" > details of project </textarea>
-    </div>
-
-    <div class="container-right" style="background-color :#cab2df">
-        <div style="display: flex; justify-content: space-between">
-            <strong> Next Action </strong>
-            <button onclick="fname.placeholder='first name'">Clear Section</button>
-        </div>
-        <label for="NDA">       NDA</label>                  <input type="checkbox" id="NDA"name="accountNDA"  > <p></p>
-        <label for="action">   Next Action</label>         <input type="text"  id="action"  name="accountURL"    list="actions">
+    <div>
+        <p></p>
+        <button type="submit" onclick="myFunction()">Submit to Spotler</button>
+        <img id=success width="20" height="20">
+        <button type="reset" onclick="myFunction()">Reset Whole Form</button>
         
     </div>
-    </div>
-</div>
-<div>
-    <p></p>
-    <button type="submit" onclick="myFunction()">Submit to Spotler</button>
-    <img id=success width="20" height="20">
-    <button type="reset" onclick="myFunction()">Reset Whole Form</button>
     
-</div>
+    <datalist id="countries">
+        <option value="Albania"></option>
+        <option value="Algeria"></option>
+        <option value="Andorra"></option>
+        <option value="Angola"></option>
+        <option value="Antarctica"></option>
+        <option value="Antigua"></option>
+        <option value="Argentina"></option>
+        <option value="Armenia"></option>
+        <option value="Aruba"></option>
+        <option value="Australia"></option>
+        <option value="Austria"></option>
+        <option value="Azerbaijan"></option>
+    
+        <option value="Bahamas"></option>
+        <option value="Bahrain"></option>
+        <option value="Bangladesh"></option>
+        <option value="Barbados"></option>
+        <option value="Belarus"></option>
+        <option value="Belgium"></option>
+        <option value="Belize"></option>
+        <option value="Benin"></option>
+        <option value="Bermuda"></option>
+        <option value="Bhutan"></option>
+        <option value="Bolivia"></option>
+        <option value="Bosnia & Herzegovina"></option>
+        <option value="Botswana"></option>
+        <option value="Brazil"></option>
+        <option value="Brunei"></option>
+        <option value="Bulgaria"></option>
+        <option value="Burkina Faso"></option>
+        <option value="Burundi"></option>
+    
+        <option value="Cambodia"></option>
+        <option value="Cameroon"></option>
+        <option value="Canada"></option>
+        <option value="Cape Verde"></option>
+        <option value="Cayman Islands"></option>
+        <option value="Central African Republic"></option>
+        <option value="Chad"></option>
+        <option value="Chile"></option>
+        <option value="China"></option>
+        <option value="Colombia"></option>
+        <option value="Comoros"></option>
+        <option value="Congo"></option>
+        <option value="Costa Rica"></option>
+        <option value="Croatia"></option>
+        <option value="Cuba"></option>
+        <option value="Cyprus"></option>
+        <option value="Czech Republic"></option>
+      
+        <option value="Denmark"></option>
+        <option value="Djibouti"></option>
+        <option value="Dominica"></option>
+        <option value="Dominican Republic"></option>
+    
+        <option value="Ecuador"></option>
+        <option value="Egypt"></option>
+        <option value="El Salvador"></option>
+        <option value="Eritrea"></option>
+        <option value="Estonia"></option>
+        <option value="Ethiopia"></option>
+    
+        <option value="Fiji"></option>
+        <option value="Finland"></option>
+        <option value="France"></option>
+        <option value="French Guiana"></option>
+    
+        <option value="Gabon"></option>
+        <option value="Gambia"></option>
+        <option value="Georgia"></option>
+        <option value="Germany"></option>
+        <option value="Ghana"></option>
+        <option value="Greece"></option>
+        <option value="Grenada"></option>
+        <option value="Guadeloupe"></option>
+        <option value="Guatemala"></option>
+        <option value="Guinea"></option>
+        <option value="Guinea-Bissau"></option>
+        <option value="Guyana"></option>
+    
+        <option value="Haiti"></option>
+        <option value="Honduras"></option>
+        <option value="Hong Kong"></option>
+        <option value="Hungary"></option>
+    
+        <option value="Iceland"></option>
+        <option value="India"></option>
+        <option value="Indonesia"></option>
+        <option value="Iran"></option>
+        <option value="Iraq"></option>
+        <option value="Ireland"></option>
+        <option value="Israel"></option>
+        <option value="Italy"></option>
+        <option value="Ivory Coast"></option>
+    
+        <option value="Jamaica"></option>
+        <option value="Japan"></option>
+        <option value="Jordan"></option>
+    
+        <option value="Kazakhstan"></option>
+        <option value="Kenya"></option>
+        <option value="Korea, Republic of"></option>
+        <option value="Kuwait"></option>
+        <option value="Kyrgyzstan"></option>
+    
+        <option value="Laos"></option>
+        <option value="Latvia"></option>
+        <option value="Lebanon"></option>
+        <option value="Lesotho"></option>
+        <option value="Libya"></option>
+        <option value="Liechtenstein"></option>
+        <option value="Lithuania"></option>
+        <option value="Luxembourg"></option>
+    
+        <option value="Macau"></option>
+        <option value="Macedonia"></option>
+        <option value="Madagascar"></option>
+        <option value="Malawi"></option>
+        <option value="Malaysia"></option>
+        <option value="Maldives"></option>
+        <option value="Mali"></option>
+        <option value="Malta"></option>
+        <option value="Martinique"></option>
+        <option value="Mauritania"></option>
+        <option value="Mauritius"></option>
+        <option value="Mexico"></option>
+        <option value="Moldova"></option>
+        <option value="Monaco"></option>
+        <option value="Mongolia"></option>
+        <option value="Morocco"></option>
+        <option value="Mozambique"></option>
+        <option value="Myanmar"></option>
+    
+        <option value="Namibia"></option>
+        <option value="Nepal"></option>
+        <option value="Netherlands"></option>
+        <option value="Netherlands Antilles"></option>
+        <option value="New Zealand"></option>
+        <option value="Nicaragua"></option>
+        <option value="Nigeria"></option>
+        <option value="Norway"></option>
+    
+        <option value="Oman"></option>
+    
+        <option value="Pakistan"></option>
+        <option value="Palau"></option>
+        <option value="Panama"></option>
+        <option value="Papua New Guinea"></option>
+        <option value="Paraguay"></option>
+        <option value="Peru"></option>
+        <option value="Philippines"></option>
+        <option value="Poland"></option>
+        <option value="Portugal"></option>
+        <option value="Puerto Rico"></option>
+    
+        <option value="Qatar"></option>
+    
+        <option value="Reunion Island"></option>
+        <option value="Romania"></option>
+        <option value="Russia"></option>
+        <option value="Rwanda"></option>
+    
+        <option value="Saint Lucia"></option>
+        <option value="Samoa"></option>
+        <option value="Saudi Arabia"></option>
+        <option value="Senegal"></option>
+        <option value="Serbia"></option>
+        <option value="Seychelles"></option>
+        <option value="Singapore"></option>
+        <option value="Slovakia"></option>
+        <option value="Slovenia"></option>
+        <option value="Solomon Islands"></option>
+        <option value="South Africa"></option>
+        <option value="Spain"></option>
+        <option value="Sri Lanka"></option>
+        <option value="St Kitts and Nevis"></option>
+        <option value="St Pierre and Miquelon"></option>
+        <option value="Sudan"></option>
+        <option value="Suriname"></option>
+        <option value="Swaziland"></option>
+        <option value="Sweden"></option>
+        <option value="Switzerland"></option>
+        <option value="Syria"></option>
+    
+        <option value="Tahiti"></option>
+        <option value="Taiwan"></option>
+        <option value="Tajikistan"></option>
+        <option value="Tanzania"></option>
+        <option value="Thailand"></option>
+        <option value="Togo"></option>
+        <option value="Trinidad and Tobago"></option>
+        <option value="Tunisia"></option>
+        <option value="Turkey"></option>
+        <option value="Tuvalu"></option>
+    
+        <option value="Uganda"></option>
+        <option value="Ukraine"></option>
+        <option value="United Arab Emirates"></option>
+        <option value="United Kingdom"></option>
+        <option value="United States of America"></option>
+    
+        <option value="Uruguay"></option>
+        <option value="US Virgin Islands"></option>
+        <option value="Uzbekistan"></option>
+    
+        <option value="Vanuatu"></option>
+        <option value="Venezuela"></option>
+        <option value="Vietnam"></option>
+    
+        <option value="Yemen"></option>
+        <option value="Yugoslavia"></option>
+    
+        <option value="Zambia"></option>
+        <option value="Zimbabwe"></option>
+    </datalist>
+    
+    <datalist id="capability">
+        <option value="End user"></option>
+        <option value="Systems Integrator"></option>
+        <option value="Solutions Provider"></option>
+        <option value="Device Maker"></option>
+        <option value="Silicon Supplier"></option>
+        <option value="Module Maker"></option>
+        <option value="Sensor Supplier"></option>
+        <option value="Installer"></option>
+        <option value="Network Operator - Satellite"></option>
+        <option value="Network Operator - LoRaWAN"></option>
+        <option value="Network Operator - Cellular"></option>
+        <option value="SaaS Supplier - LNS"></option>
+        <option value="SaaS Supplier - Apps / Data Platform"></option>
+        <option value="SaaS Supplier - Billing"></option>
+        <option value="Academic / Researcher"></option>
+        <option value="Consultant"></option>
+        <option value="Analyst"></option>
+        <option value="MMedia"></option>
+        <option value="Investor"></option>
+        <option value="Competitor"></option>
+        <option value="Sales Channel"></option>
+    </datalist>
+    
+    <datalist id="sectors">
+        <option value="General IoT"></option>
+        <option value="Agriculture"></option>
+        <option value="Marine"></option>
+        <option value="Environmental"></option>
+        <option value="Utilities & Energy"></option>
+        <option value="Space Sector"></option>
+        <option value="Industrial & Manufacturing"></option>
+        <option value="Defence"></option>
+        <option value="Transportation"></option>
+        <option value="Construction"></option>
+        <option value="Infrastructure"></option>
+        <option value="Healthcare"></option>
+        <option value="Buildings"></option>
+        <option value="Leisure"></option>
+        <option value="Finance"></option>
+    </datalist>
+    
+    <datalist id="action">
+        <option value="NDA (Ours)"></option>
+        <option value="NDA (Theirs)"></option>
+        <option value="Conf Call"></option>
+    </datalist>
 
-<datalist id="countries">
-    <option value="Albania"></option>
-    <option value="Algeria"></option>
-    <option value="Andorra"></option>
-    <option value="Angola"></option>
-    <option value="Antarctica"></option>
-    <option value="Antigua"></option>
-    <option value="Argentina"></option>
-    <option value="Armenia"></option>
-    <option value="Aruba"></option>
-    <option value="Australia"></option>
-    <option value="Austria"></option>
-    <option value="Azerbaijan"></option>
-
-    <option value="Bahamas"></option>
-    <option value="Bahrain"></option>
-    <option value="Bangladesh"></option>
-    <option value="Barbados"></option>
-    <option value="Belarus"></option>
-    <option value="Belgium"></option>
-    <option value="Belize"></option>
-    <option value="Benin"></option>
-    <option value="Bermuda"></option>
-    <option value="Bhutan"></option>
-    <option value="Bolivia"></option>
-    <option value="Bosnia & Herzegovina"></option>
-    <option value="Botswana"></option>
-    <option value="Brazil"></option>
-    <option value="Brunei"></option>
-    <option value="Bulgaria"></option>
-    <option value="Burkina Faso"></option>
-    <option value="Burundi"></option>
-
-    <option value="Cambodia"></option>
-    <option value="Cameroon"></option>
-    <option value="Canada"></option>
-    <option value="Cape Verde"></option>
-    <option value="Cayman Islands"></option>
-    <option value="Central African Republic"></option>
-    <option value="Chad"></option>
-    <option value="Chile"></option>
-    <option value="China"></option>
-    <option value="Colombia"></option>
-    <option value="Comoros"></option>
-    <option value="Congo"></option>
-    <option value="Costa Rica"></option>
-    <option value="Croatia"></option>
-    <option value="Cuba"></option>
-    <option value="Cyprus"></option>
-    <option value="Czech Republic"></option>
-  
-    <option value="Denmark"></option>
-    <option value="Djibouti"></option>
-    <option value="Dominica"></option>
-    <option value="Dominican Republic"></option>
-
-    <option value="Ecuador"></option>
-    <option value="Egypt"></option>
-    <option value="El Salvador"></option>
-    <option value="Eritrea"></option>
-    <option value="Estonia"></option>
-    <option value="Ethiopia"></option>
-
-    <option value="Fiji"></option>
-    <option value="Finland"></option>
-    <option value="France"></option>
-    <option value="French Guiana"></option>
-
-    <option value="Gabon"></option>
-    <option value="Gambia"></option>
-    <option value="Georgia"></option>
-    <option value="Germany"></option>
-    <option value="Ghana"></option>
-    <option value="Greece"></option>
-    <option value="Grenada"></option>
-    <option value="Guadeloupe"></option>
-    <option value="Guatemala"></option>
-    <option value="Guinea"></option>
-    <option value="Guinea-Bissau"></option>
-    <option value="Guyana"></option>
-
-    <option value="Haiti"></option>
-    <option value="Honduras"></option>
-    <option value="Hong Kong"></option>
-    <option value="Hungary"></option>
-
-    <option value="Iceland"></option>
-    <option value="India"></option>
-    <option value="Indonesia"></option>
-    <option value="Iran"></option>
-    <option value="Iraq"></option>
-    <option value="Ireland"></option>
-    <option value="Israel"></option>
-    <option value="Italy"></option>
-    <option value="Ivory Coast"></option>
-
-    <option value="Jamaica"></option>
-    <option value="Japan"></option>
-    <option value="Jordan"></option>
-
-    <option value="Kazakhstan"></option>
-    <option value="Kenya"></option>
-    <option value="Korea, Republic of"></option>
-    <option value="Kuwait"></option>
-    <option value="Kyrgyzstan"></option>
-
-    <option value="Laos"></option>
-    <option value="Latvia"></option>
-    <option value="Lebanon"></option>
-    <option value="Lesotho"></option>
-    <option value="Libya"></option>
-    <option value="Liechtenstein"></option>
-    <option value="Lithuania"></option>
-    <option value="Luxembourg"></option>
-
-    <option value="Macau"></option>
-    <option value="Macedonia"></option>
-    <option value="Madagascar"></option>
-    <option value="Malawi"></option>
-    <option value="Malaysia"></option>
-    <option value="Maldives"></option>
-    <option value="Mali"></option>
-    <option value="Malta"></option>
-    <option value="Martinique"></option>
-    <option value="Mauritania"></option>
-    <option value="Mauritius"></option>
-    <option value="Mexico"></option>
-    <option value="Moldova"></option>
-    <option value="Monaco"></option>
-    <option value="Mongolia"></option>
-    <option value="Morocco"></option>
-    <option value="Mozambique"></option>
-    <option value="Myanmar"></option>
-
-    <option value="Namibia"></option>
-    <option value="Nepal"></option>
-    <option value="Netherlands"></option>
-    <option value="Netherlands Antilles"></option>
-    <option value="New Zealand"></option>
-    <option value="Nicaragua"></option>
-    <option value="Nigeria"></option>
-    <option value="Norway"></option>
-
-    <option value="Oman"></option>
-
-    <option value="Pakistan"></option>
-    <option value="Palau"></option>
-    <option value="Panama"></option>
-    <option value="Papua New Guinea"></option>
-    <option value="Paraguay"></option>
-    <option value="Peru"></option>
-    <option value="Philippines"></option>
-    <option value="Poland"></option>
-    <option value="Portugal"></option>
-    <option value="Puerto Rico"></option>
-
-    <option value="Qatar"></option>
-
-    <option value="Reunion Island"></option>
-    <option value="Romania"></option>
-    <option value="Russia"></option>
-    <option value="Rwanda"></option>
-
-    <option value="Saint Lucia"></option>
-    <option value="Samoa"></option>
-    <option value="Saudi Arabia"></option>
-    <option value="Senegal"></option>
-    <option value="Serbia"></option>
-    <option value="Seychelles"></option>
-    <option value="Singapore"></option>
-    <option value="Slovakia"></option>
-    <option value="Slovenia"></option>
-    <option value="Solomon Islands"></option>
-    <option value="South Africa"></option>
-    <option value="Spain"></option>
-    <option value="Sri Lanka"></option>
-    <option value="St Kitts and Nevis"></option>
-    <option value="St Pierre and Miquelon"></option>
-    <option value="Sudan"></option>
-    <option value="Suriname"></option>
-    <option value="Swaziland"></option>
-    <option value="Sweden"></option>
-    <option value="Switzerland"></option>
-    <option value="Syria"></option>
-
-    <option value="Tahiti"></option>
-    <option value="Taiwan"></option>
-    <option value="Tajikistan"></option>
-    <option value="Tanzania"></option>
-    <option value="Thailand"></option>
-    <option value="Togo"></option>
-    <option value="Trinidad and Tobago"></option>
-    <option value="Tunisia"></option>
-    <option value="Turkey"></option>
-    <option value="Tuvalu"></option>
-
-    <option value="Uganda"></option>
-    <option value="Ukraine"></option>
-    <option value="United Arab Emirates"></option>
-    <option value="United Kingdom"></option>
-    <option value="United States of America"></option>
-
-    <option value="Uruguay"></option>
-    <option value="US Virgin Islands"></option>
-    <option value="Uzbekistan"></option>
-
-    <option value="Vanuatu"></option>
-    <option value="Venezuela"></option>
-    <option value="Vietnam"></option>
-
-    <option value="Yemen"></option>
-    <option value="Yugoslavia"></option>
-
-    <option value="Zambia"></option>
-    <option value="Zimbabwe"></option>
-</datalist>
-
-<datalist id="capability">
-    <option value="End user"></option>
-    <option value="Systems Integrator"></option>
-    <option value="Solutions Provider"></option>
-    <option value="Device Maker"></option>
-    <option value="Silicon Supplier"></option>
-    <option value="Module Maker"></option>
-    <option value="Sensor Supplier"></option>
-    <option value="Installer"></option>
-    <option value="Network Operator - Satellite"></option>
-    <option value="Network Operator - LoRaWAN"></option>
-    <option value="Network Operator - Cellular"></option>
-    <option value="SaaS Supplier - LNS"></option>
-    <option value="SaaS Supplier - Apps / Data Platform"></option>
-    <option value="SaaS Supplier - Billing"></option>
-    <option value="Academic / Researcher"></option>
-    <option value="Consultant"></option>
-    <option value="Analyst"></option>
-    <option value="MMedia"></option>
-    <option value="Investor"></option>
-    <option value="Competitor"></option>
-    <option value="Sales Channel"></option>
-</datalist>
-
-<datalist id="sectors">
-    <option value="General IoT"></option>
-    <option value="Agriculture"></option>
-    <option value="Marine"></option>
-    <option value="Environmental"></option>
-    <option value="Utilities & Energy"></option>
-    <option value="Space Sector"></option>
-    <option value="Industrial & Manufacturing"></option>
-    <option value="Defence"></option>
-    <option value="Transportation"></option>
-    <option value="Construction"></option>
-    <option value="Infrastructure"></option>
-    <option value="Healthcare"></option>
-    <option value="Buildings"></option>
-    <option value="Leisure"></option>
-    <option value="Finance"></option>
-</datalist>
-
-<datalist id="action">
-    <option value="NDA (Ours)"></option>
-    <option value="NDA (Theirs)"></option>
-    <option value="Conf Call"></option>
-</datalist>
+    </body>
+</html>html
