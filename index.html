@@ -10,6 +10,19 @@
   </head>
   
   <body>
+
+    <script> 
+      function myFunction () {
+        var myURL = "https://webtrans.reallysimplesystems.com/webtrans.gif?c=181450&t=test_webtrans";
+        myURL += "&contactfirst=" + fname.value ;
+        myURL += "&contactlast=" + lname.value ;
+        myURL += "&companyname=" + company.value ;
+        myURL += "&contactemail=" + email.value ;
+        success.src=encodeURI(myURL);  
+        return;
+      }
+    </script>
+    
     <div class="section">
         <div class="container-left" >
             <div style="display: flex; justify-content: space-between">
