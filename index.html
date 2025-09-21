@@ -12,7 +12,7 @@
   <body>
 
     <script> 
-      function myFunction () {
+      function submitFunction () {
         var myURL = "https://webtrans.reallysimplesystems.com/webtrans.gif?c=181450&t=test_webtrans";
         myURL += "&contactfirst=" + fname.value ;
         myURL += "&contactlast=" + lname.value ;
@@ -21,13 +21,23 @@
         success.src=encodeURI(myURL);  
         return;
       }
+
+      function clearContact () {
+          fname.placeholder = "reset";
+          fname.placeholder = "reset";
+          email.placeholder = "reset";
+          gdpr.value = "";
+          news.value = "";
+        return;
+      }
+      
     </script>
     
     <div class="section">
         <div class="container-left" >
             <div style="display: flex; justify-content: space-between">
                 <strong> Organisation </strong>
-                <button onclick="fname.placeholder='first name'">Clear Section</button>
+                <button onclick="clearOrg()">  Clear Section</button>
             </div>
             <label for="company">   Org Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
             <label for="type">      Capability</label>      <input type="text"  id="type"    name="companytype" autocapitalize="words" list="capability">
@@ -40,13 +50,13 @@
         <div class="container-right" style="background-color :#ab80d0">
             <div style="display: flex; justify-content: space-between">
                 <strong> Contact </strong>
-                <button onclick="fname.placeholder='first name'">Clear Section</button>
+                <button onclick="clearContact()">  Clear Section</button>
             </div>
             <label for="fname">     First Name</label>      <input type="text"  id="fname"  name="contactfirst" autocapitalize="words">
             <label for="lname">     Last Name</label>       <input type="text"  id="lname"  name="contactlast"  autocapitalize="words">
             <label for="email">     Email</label>           <input type="text"  id="email"  name="contactemail" required>
-            <label for="gdpr">      GDPR</label>            <input type="checkbox" id="gdpr"name="contactgdpr"  >
-            <label for="news">      Newsletter</label>      <input type="checkbox" id="news"name="contactnews"  >
+            <label for="gdpr">      GDPR</label>            <input type="checkbox" id="gdpr"name="contactgdpr"  value="true">
+            <label for="news">      Newsletter</label>      <input type="checkbox" id="news"name="contactnews"  value="true">
         </div>
     </div>
     <p></p>
@@ -75,9 +85,9 @@
     </div>
     <div>
         <p></p>
-        <button type="submit" onclick="myFunction()">Submit to Spotler</button>
+        <button type="submit" onclick="submitFunction()">  Submit to Spotler</button>
         <img id=success width="20" height="20">
-        <button type="reset" onclick="myFunction()">Reset Whole Form</button>
+        <button type="reset">  Reset Whole Form</button>
         
     </div>
     
