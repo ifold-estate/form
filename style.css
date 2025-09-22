@@ -65,14 +65,6 @@ input[type=checkbox] {
   padding: 20px;
 }
 
-.container-middle {
-  flex: auto;
-  width: 2%;
-  border-radius: 10px;
-  background-color: #c697ee;
-  padding: 20px;
-}
-
 .container-right {
   flex: auto;
   width: 49%;
