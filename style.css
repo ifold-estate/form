@@ -58,8 +58,16 @@ input[type=checkbox] {
 
 .container-left {
   flex: auto;
-  width: 50%;
+  width: 49%;
   min-width: 400px;
+  border-radius: 10px;
+  background-color: #c697ee;
+  padding: 20px;
+}
+
+.container-middle {
+  flex: auto;
+  width: 2%;
   border-radius: 10px;
   background-color: #c697ee;
   padding: 20px;
@@ -67,7 +75,7 @@ input[type=checkbox] {
 
 .container-right {
   flex: auto;
-  width: 50%;
+  width: 49%;
   border-radius: 10px;
   background-color: #a36ed2;
   padding: 20px;
