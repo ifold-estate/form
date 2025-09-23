@@ -14,22 +14,62 @@
     <script> 
       function submitFunction () {
         var myURL = "https://webtrans.reallysimplesystems.com/webtrans.gif?c=181450&t=test_webtrans";
+        myURL += "&accountName=" + company.value ;
+        myURL += "&accountType=" + type.value ;
+        myURL += "&accountAddressCountry=" + HQ.value ;
+        myURL += "&accountWebsite=" + website.value ;
+        myURL += "&accountRevenue=" + scale.value ;
+        myURL += "&accountNetID=" + NetID.value ;
         myURL += "&contactfirst=" + fname.value ;
         myURL += "&contactlast=" + lname.value ;
-        myURL += "&companyname=" + company.value ;
         myURL += "&contactemail=" + email.value ;
+        myURL += "&contactForumUser=" + gdpr.value ;
+        myURL += "&opportunityName=" + project.value ;
+        myURL += "&opportunitySector=" + sector.value ;
+        myURL += "&opportunityTestingCountry=" + deploy.value ;
+        myURL += "&opportunityDescription=" + notes.value ;
+        myURL += "&opportunityNextStep=" + action.value ;
         success.src=encodeURI(myURL);  
         return;
       }
-
+      
+      function clearOrg () {
+          company.value = "";
+          type.value = "";
+          HQ.value = "";
+          website.value = "";
+          scale.value = "";
+          NetID.checked = "flase";
+        return;
+      }
       function clearContact () {
-          fname.placeholder = "reset";
-          lname.placeholder = "reset";
-          email.placeholder = "reset";
+          fname.value = "";
+          lname.value = "";
+          email.value = "";
           gdpr.checked = "false";
           news.checked = "false";
         return;
       }
+      function clearProject () {
+          project.value = "";
+          sector.value = "";
+          deploy.value = "";
+          notes.value = "";
+        return;
+      }
+      function clearAction () {
+          action.value = "";
+          NDA.checked = "false";
+        return;
+      }    
+      function clearAction () {
+          clearOrg;
+          clearContact;
+          clearProject;
+          clearAction;
+        return;
+      }   
+
       
     </script>
     
@@ -39,50 +79,50 @@
                 <strong> Organisation </strong>
                 <button onclick="clearOrg()">  Clear Section</button>
             </div>
-            <label for="company">   Org Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
-            <label for="type">      Capability</label>      <input type="text"  id="type"    name="companytype" autocapitalize="words" list="capability">
-            <label for="HQ">        HQ Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
-            <label for="website">   Website</label>         <input type="text"  id="website" name="accountURL"  >
-            <label for="scale">     Devices Deployed</label><input type="text"  id="scale"   name="accountScale"  >
-            <label for="LAmember">  LoRa NetID?</label>     <input type="checkbox" id=""name="accountNetID" >
+            <label for="company">   Org Name</label>        <input type="text"      id="company"   name="companyname" autocapitalize="words">
+            <label for="type">      Capability</label>      <input type="text"      id="type"      name="companytype" autocapitalize="words" list="capability">
+            <label for="HQ">        HQ Country</label>      <input type="text"      id="HQ"        name="HQCountry"   autocapitalize="words" list="countries">
+            <label for="website">   Website</label>         <input type="text"      id="website"   name="accountURL"  >
+            <label for="scale">     Devices Deployed</label><input type="text"      id="scale"     name="accountScale"  >
+            <label for="NetID">  LoRa NetID?</label>         <input type="checkbox" id="NetID"     name="accountNetID" >
         </div>
 
         <div> </div>
       
-        <div class="container-right" style="background-color :#ab80d0">
+        <div class="container-right" >
             <div style="display: flex; justify-content: space-between">
                 <strong> Contact </strong>
                 <button onclick="clearContact()">  Clear Section</button>
             </div>
-            <label for="fname">     First Name</label>      <input type="text"  id="fname"  name="contactfirst" autocapitalize="words">
-            <label for="lname">     Last Name</label>       <input type="text"  id="lname"  name="contactlast"  autocapitalize="words">
-            <label for="email">     Email</label>           <input type="text"  id="email"  name="contactemail" required>
-            <label for="gdpr">      GDPR</label>            <input type="checkbox" id="gdpr"name="contactgdpr"  value="true">
-            <label for="news">      Newsletter</label>      <input type="checkbox" id="news"name="contactnews"  value="true">
+            <label for="fname">     First Name</label>      <input type="text"      id="fname" name="contactfirst" autocapitalize="words">
+            <label for="lname">     Last Name</label>       <input type="text"      id="lname" name="contactlast"  autocapitalize="words">
+            <label for="email">     Email</label>           <input type="text"      id="email" name="contactemail" required>
+            <label for="gdpr">      GDPR</label>            <input type="checkbox"  id="gdpr"  name="contactgdpr"  value="true">
+            <label for="news">      Newsletter</label>      <input type="checkbox"  id="news"  name="contactnews"  value="true">
         </div>
     </div>
     <p></p>
     <div class="section">
-        <div class="container-left" style="background-color :#b797d3" >
+        <div class="container-left" >
             <div style="display: flex; justify-content: space-between">
                 <strong> Project </strong>
-                <button onclick="fname.placeholder='first name'">Clear Section</button>
+                <button onclick="clearProject()">  Clear Section</button>
             </div>
-            <label for="company">   Project Name</label>        <input type="text"  id="company" name="companyname" autocapitalize="words">
-            <label for="type">      Sector</label>              <input type="text"  id="type"    name="companytype" autocapitalize="words" list="sectors">
-            <label for="HQ">        Target Country</label>      <input type="text"  id="country" name="HQCountry"   autocapitalize="words" list="countries">
-            <label for="OppNotes">  Description</label>         <textarea           id="OppNotes"name="oppNotes"    rows="5" > details of project </textarea>
+            <label for="project">  Project Name</label>        <input type="text"  id="project"   name="companyname" autocapitalize="words">
+            <label for="sector">   Sector</label>              <input type="text"  id="sector"    name="companytype" autocapitalize="words" list="sectors">
+            <label for="deploy">   Target Country</label>      <input type="text"  id="deploy"    name="HQCountry"   autocapitalize="words" list="countries">
+            <label for="notes">    Description</label>         <textarea           id="notes "    name="oppNotes"    rows="5" > details of project </textarea>
         </div>
 
         <div> </div>
       
-        <div class="container-right" style="background-color :#cab2df">
+        <div class="container-right" >
             <div style="display: flex; justify-content: space-between">
                 <strong> Next Action </strong>
-                <button onclick="fname.placeholder='first name'">Clear Section</button>
+                <button onclick="clearAction()">  Clear Section</button>
             </div>
-            <label for="NDA">       NDA</label>                  <input type="checkbox" id="NDA"name="accountNDA"  > <p></p>
-            <label for="action">   Next Action</label>         <input type="text"  id="action"  name="accountURL"    list="actions">
+            <label for="NDA">       NDA</label>              <input type="checkbox"  id="NDA"    name="accountNDA"  > <p></p>
+            <label for="action">   Next Action</label>       <input type="text"      id="action"  name="accountURL"    list="actions">
             
         </div>
         </div>
@@ -91,7 +131,7 @@
         <p></p>
         <button type="submit" onclick="submitFunction()">  Submit to Spotler</button>
         <img id=success width="20" height="20">
-        <button type="reset">  Reset Whole Form</button>
+        <button onclick="clearAll()">  Reset Whole Form</button>
         
     </div>
     
