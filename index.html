@@ -15,20 +15,7 @@
       function submitFunction () {
         var myURL = "https://webtrans.reallysimplesystems.com/webtrans.gif?c=181450&t=test_webtrans";
         myURL += "&accountName=" + company.value ;
-        myURL += "&accountType=" + type.value ;
-        myURL += "&accountAddressCountry=" + HQ.value ;
-        myURL += "&accountWebsite=" + website.value ;
-        myURL += "&accountRevenue=" + scale.value ;
-        myURL += "&accountNetID=" + netID.value ;
-        myURL += "&contactFirst=" + fname.value ;
-        myURL += "&contactLast=" + lname.value ;
-        myURL += "&contactEmail=" + email.value ;
-        myURL += "&contactForumUser=" + gdpr.value ;
-        myURL += "&opportunityName=" + project.value ;
-        myURL += "&opportunitySector=" + sector.value ;
-        myURL += "&opportunityTestingCountry=" + deploy.value ;
-        myURL += "&opportunityDescription=" + notes.value ;
-        myURL += "&opportunityNextStep=" + action.value ;
+
         success.src=encodeURI(myURL);  
         return;
       }
