@@ -15,7 +15,11 @@
       function submitFunction () {
         var myURL = "https://webtrans.reallysimplesystems.com/webtrans.gif?c=181450&t=test_webtrans";
         myURL += "&accountName=" + company.value ;
-
+        myURL += "&accountType=" + type.value ;
+        myURL += "&accountAddressCountry=" + HQ.value ;
+        myURL += "&accountWebsite=" + website.value ;
+        myURL += "&accountRevenue=" + scale.value ;
+        myURL += "&accountNetID=" + netID.value ;
         success.src=encodeURI(myURL);  
         return;
       }
